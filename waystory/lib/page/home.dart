@@ -9,9 +9,37 @@ class HomePage extends StatelessWidget {
       //   title:Text('begin'),
       // ),
       body: 
-        Container(
-          child: Text('Hello world'),
-        ),
+        Container (
+          margin: MediaQuery.of(context).padding, //เว้นระยะข้างบนลงมา full screen
+          color: Colors.amber,
+          child :
+            Column (
+              mainAxisAlignment:MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: 
+                <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: 
+                      <Widget> [
+                        Text('Hi')
+                      ]
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 100, 0),
+                      // padding:const EdgeInsets.all(30.0),
+                      child :
+                        Row(
+                          mainAxisAlignment:MainAxisAlignment.end,
+                          children: 
+                          <Widget>[
+                            Text('hello')
+                          ],
+                        )
+                    )
+                    ],
+            )
+        )
     );
   }
 
